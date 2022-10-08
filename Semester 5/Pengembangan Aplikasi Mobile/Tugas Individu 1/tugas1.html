@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Membuat Tabel HTML</title>
+</head>
+<body>
+    <table id="tabel" border="1">
+        <tr id="baris 1">
+            <td>No</td>
+            <td>Nama</td>
+            <td>NIM</td>
+            <td>Nilai</td>
+        </tr>
+        <tr id="baris 2">	
+            <td>1</td>
+            <td>Boy</td>
+            <td>123</td>
+            <td>60</td>
+        </tr>
+        <tr id="baris 3">
+            <td>2</td>
+            <td>Aldi</td>
+            <td>124</td>
+            <td>70</td>   
+        </tr>
+        <tr id="baris 4">
+            <td>3</td>
+            <td>Ade</td>
+            <td>125</td>
+            <td>40</td>   
+        </tr>
+        <tr id="baris 5">
+            <td>4</td>
+            <td>Randy</td>
+            <td>126</td>
+            <td>90</td>   
+        </tr>
+    </table>
 
+    <button onclick="HurufMutu()">Tambah Huruf Mutu</button>
+    <script>
+        function HurufMutu(){
+            for(var count = 1; count < 6; count++){
+                var row = document.getElementById("baris " + String(count));
+                var x = row.insertCell(-1);
+                if (count != 1) {
+                    for (var n = 1; n < 3; n++) {
+                        var nilai = document.getElementById("tabel").rows[3].cells[3].innerHTML;
+                        if (nilai >= 80) {x.innerHTML = "A";}
+                        else if (70 <= nilai < 80) {x.innerHTML = "AB";}
+                        else if (60 <= nilai < 70) {x.innerHTML = "B";}
+                        else if (50 <= nilai < 60) {x.innerHTML = "BC";}
+                        else if (40 <= nilai < 50) {x.innerHTML = "C";}
+                        else if (10 <= nilai < 40) {x.innerHTML = "D";}
+                        else {x.innerHTML = "E";}
+                    }
+                } else {
+                    x.innerHTML = "Huruf Mutu";
+                }                
+            }            
+        }
+    </script>
+</body>
+</html>
