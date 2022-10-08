@@ -45,7 +45,7 @@
                 var x = row.insertCell(-1);
                 if (count != 1) {
                     for (var n = 1; n < 5; n++) {
-                        var nilai = document.getElementById("tabel").rows[3].cells[3].innerHTML;
+                        var nilai = document.getElementById("tabel").rows[n].cells[3].innerHTML;
                         if (nilai >= 80) {x.innerHTML = "A";}
                         else if (70 <= nilai < 80) {x.innerHTML = "AB";}
                         else if (60 <= nilai < 70) {x.innerHTML = "B";}
